@@ -2,33 +2,39 @@ var cardOne = "Queen";
 var cardTwo = "Queen";
 var cardThree = "King";
 var cardFour = "King";
+
 if (cardTwo === cardFour){
 	alert ("try again");
 }
 else if (cardTwo === cardThree){
 	alert ("try again");
 }
-else {
-	alert ("found a match!");
-}
-if (cardOne === cardThree){
+else if (cardOne === cardThree){
 	alert ("try again");
 }
 else if (cardOne === cardFour){
 	alert ("try again");
 }
-else {
+else if (cardTwo === cardOne){
 	alert ("found a match!");
 }
-if (cardThree === cardFour){
+else if (cardThree === cardFour){
 	alert ("found a match");
 }
 else {
 	alert ("try again");
 }
-if (cardFour === cardThree){
-	alert ("found a match")
+
+var cardNumber = document.getElementById('game-board');
+for (var i = 0; i < cardNumber.length; i++){
+	cardNumber[i].className = 'cardOne';
 }
-else {
-	alert ("try again");
+for (var i = 0; i < cardNumber.length; i++){
+	cardNumber[i].className = 'cardTwo';
+}
+for (var i = 0; i < cardNumber.length; i++){
+	cardNumber[i].className = 'cardThree';
+}
+for (var i = 0; i < cardNumber.length; i++){
+	cardNumber[i].className = 'cardFour';
 }
